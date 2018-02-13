@@ -9,9 +9,9 @@ class TasksController < ApplicationController
   end
 
    def create
-    @task = Task.new(
-      title: params[:title],
-      details: params[:details])
+    @task = Task.new(params[:task])
+    @restaurant.save
+
   end
 
   def edit
